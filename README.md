@@ -164,7 +164,7 @@ firebase emulators:start
 
 ```mermaid
 graph TD
-  A[Inicio] --> B[Servicis]
+  A[Inicio] --> B[Servicios]
   B --> B1[Conferencias]
   B --> B2[Talleres]
   B --> B3[Mentoría Grupal]
@@ -179,7 +179,7 @@ graph TD
 
 ### 🧱 Internal Route Structure
 
-- `/` (Inicio)
+- `/` (Inicio) main hero page 
 - `/servicios`
   - `/servicios/conferencias`
   - `/servicios/talleres`
@@ -188,11 +188,171 @@ graph TD
   - `/servicios/nexo-estrategico`
 - `/metodo-dance`
 - `/sobre-kamdata`
-- `/casos-exito`
+- `/casos-éxito`
 - `/blog`
 - `/contacto`
 
 ---
+
+## 📦 Deployment
+
+### Build Frontend
+
+```bash
+cd frontend
+npm run build
+```
+
+### Deploy to Firebase Hosting
+
+```bash
+firebase deploy --only hosting
+```
+
+### Deploy Cloud Functions
+
+```bash
+firebase deploy --only functions
+```
+
+---
+
+## 🌍 Content Delivery
+
+- Firebase Hosting uses a **global CDN** for fast delivery.
+- Static assets (e.g., images) can be linked via **Cloud Storage** buckets.
+- Serverless backend using **Cloud Functions**.
+
+---
+
+## 🔧 Backend Structure
+
+- **Cloud Functions**: API requests, form handlers (`submitContactForm`)
+- **Firestore** (optional): Store form data or dynamic content
+
+### Firestore Example Structure
+
+```
+collections:
+  - contacts
+    - name
+    - email
+    - message
+    - timestamp
+```
+
+---
+
+## 🐞 Debugging and Monitoring
+
+- Use **Firebase Emulator Suite** for local testing.
+- Access logs in **Firebase Console** or **Cloud Logging**.
+- Monitor events in **Firebase DebugView**.
+
+---
+
+## 🔁 CI/CD Pipeline
+
+### GitHub Actions Workflow
+
+- Triggers on push to `main`
+- Builds frontend and deploys to Firebase
+
+**Workflow file:** `.github/workflows/deploy.yml`
+
+---
+
+## 🎨 UX/UI Details
+
+- **Tailwind CSS** framework
+- **Typography**:
+  - **Headings**: `Montserrat`
+  - **Body**: `Lato`
+
+- **Official Color Palette**:
+  - 🎯 **Hunyadi Yellow** (`#E8AC41`) – Used for calls to action and clarity
+  - ⚡ **Strawberry** (`#FC4C4E`) – Represents digital mindset and transformation
+  - 🔵 **Cerulean** (`#0492C2`) – Symbolizes methodology, structure, and trust
+
+- **Visual Style**:
+  - Accessible minimalism
+  - Visual metaphors: compass, dots, paths, and dance
+  - Modern iconography to represent values and benefits
+
+- **Animations**:
+  - Smooth text appearance
+  - Compass rotation
+  - Connecting dot transitions (CSS or Framer Motion)
+
+- **Mockups**:
+  - Simulated interaction through dashboards, forms, and activity logs
+
+---
+
+## 🔄 Maintenance
+
+- Update all dependencies regularly:
+
+```bash
+npm update
+```
+
+- Monitor performance in:
+  - Firebase Console
+  - Cloud Monitoring / Logging
+
+---
+
+## 🧰 Pipelines, Data Governance, and Compliance
+
+- **CI/CD**: GitHub Actions automates deploys
+- **Data Governance**:
+  - Firestore Security Rules restrict access
+- **Compliance**:
+  - Enforce least privilege IAM
+  - Enable audit logging
+  - HTTPS enforced by Firebase Hosting
+
+---
+
+## 🔐 Security
+
+- HTTPS enforced by Firebase Hosting
+- Cloud Functions handle **input validation & sanitization**
+- Firestore rules protect sensitive user data
+
+---
+
+## ☁️ Google Cloud Optimization
+
+- CDN-backed Firebase Hosting
+- Auto-scaling Cloud Functions
+- Optimize static assets
+- Enable lazy loading and compression
+
+---
+
+## 🔗 Connected Resources
+
+- **Firebase Hosting** – Static website delivery
+- **Firebase Functions** – API backend
+- **Firestore** – Optional data storage
+- **Cloud Storage** – File hosting
+- **Terraform** – Infrastructure provisioning
+
+---
+
+## 📞 Contact & Support
+
+For support or technical questions:
+
+📬 kamdata.mx  
+💬 [WhatsApp Support](https://wa.me/message/X7EEXB5WU6QAM1)
+
+---
+
+> 🧠 *Built with care by KAMDATA – Donde el crecimiento digital comienza con mentalidad.*
+> With love E-vior developments - Innovation that transcends
 
 
 
