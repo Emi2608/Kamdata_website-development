@@ -1,6 +1,6 @@
-# Kamdata Website
+# 🧠 Kamdata Website Cloud development & Architecture Design 
 
-This repository contains the code and infrastructure for the Kamdata website, a platform designed to enable professionals and teams to turn data into strategic decisions through mentoring and practical training.
+This repository contains the code and infrastructure for the Kamdata website, a website designed to enable professionals and teams to turn data into strategic decisions through mentoring and practical training.
 
 ## Project Overview
 
