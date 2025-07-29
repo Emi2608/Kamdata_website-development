@@ -20,7 +20,7 @@ graph TD
     A[GitHub Repository] --> B[GitHub Actions]
     B --> C[Build Frontend]
     C --> D[Deploy to Firebase Hosting]
-    E[Cloud Functions] --> F[Handle API Requests]
+    E[Cloud Run] --> F[Handle API Requests]
     G[Firestore] --> H[Dynamic Data]
     I[Cloud Storage] --> J[Assets]
     D --> K[Static Website]
@@ -326,7 +326,7 @@ npm update
 ## ☁️ Google Cloud Optimization
 
 - CDN-backed Firebase Hosting
-- Auto-scaling Cloud Functions
+- Auto-scaling Cloud Run
 - Optimize static assets
 - Enable lazy loading and compression
 
